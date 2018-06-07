@@ -1,0 +1,20 @@
+1，查看显卡设备是否存在， 下面查询NVIDIA显卡
+lspci | grep -i nvidia
+
+2，查看驱动是否已经运行
+lsmod | grep nvidia
+
+3, 删除nvidia 驱动命令(更新驱动才需要)
+sudo apt-get remove --purge nvidia*
+
+4，删除cuda
+sudo apt-get autoremove cuda
+
+5, 重启(可选)
+sudo reboot
+
+6, 安装cuda
+sudo dpkg -i cuda-repo-ubuntu1704-9-0-local_9.0.176-1_amd64.deb
+sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+sudo apt-get update
+sudo apt-get install cuda
