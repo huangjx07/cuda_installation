@@ -17,14 +17,14 @@
 - 安装cuda
   > sudo dpkg -i cuda-repo-ubuntu1704-9-0-local_9.0.176-1_amd64.deb
 
-  > sudo apt-key add /var/cuda-repo-<version>/7fa2af80.pub
+  > sudo apt-key add /var/cuda-repo-`<version>`/7fa2af80.pub
   
   > sudo apt-get update
 
   > sudo apt-get install cuda
 
 - 同时安装多个版本
-  > sudo sh cuda_<version>.run安装
+  > sudo sh cuda_`<version>`.run
   （安装过程中，nvidia driver选择no，创建软链接选择no）
 
   > sudo rm -rf /usr/local/cuda
