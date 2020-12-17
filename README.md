@@ -32,3 +32,22 @@
   > sudo ln -s /usr/local/cuda-10.1 /usr/local/cuda
 
   > nvcc --version (检查当前cuda版本)
+
+- cudnn配置：
+  > tar -zxvf cudnn-`<version>`.tgz  
+  
+  > cd cuda  
+  
+  > sudo cp lib64/lib* /usr/local/cuda/lib64/  
+  
+  > sudo cp include/cudnn.h /usr/local/cuda/include/ 
+  
+  > cd /usr/local/cuda/lib64/
+  
+  > sudo chmod +r libcudnn.so.5.1.3  
+  
+  > sudo ln -sf libcudnn.so.5.1.3 libcudnn.so.5
+  
+  > sudo ln -sf libcudnn.so.5 libcudnn.so
+  
+  > sudo ldconfig
